@@ -1,0 +1,141 @@
+.work {
+
+    &__container {
+        margin: 40px 20px;
+        display: flex;
+        flex-direction: column;
+
+        & > h1 {
+            font-size: 2.5rem;
+            color: $blue;
+            margin-top: 20px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+
+        &-header {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-end;
+            margin-top: 80px;
+            margin-bottom: 40px;
+            margin-left: 50px;
+
+            & > h2 {
+                padding-right: 15px;
+                font-size: 2.2rem;
+                color: $maroon;
+                font-family: $primary-font;
+            }
+            & > h3 {
+                padding-bottom: 4px;
+                font-weight: 300;
+            }
+        }
+
+    }
+
+    &__project {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        &.design {
+            margin: 20px 55px;
+            flex-direction: column;
+        }
+
+        & > img {
+            margin-top: 25px;
+        }
+
+        &--desc {
+            margin-left: 30px;
+
+            &.design {
+                padding-top: 30px;
+            }
+
+            &-title {
+                font-weight: 700;
+                margin-top: 10px;
+                font-size: 1.7rem;
+            }
+
+             & > p:nth-of-type(1) {
+                    padding-top: 25px;
+                }
+
+            & > p {
+                font-family: $secondary-font;
+                font-weight: 300;
+                line-height: 1.5rem;
+                padding-top: 15px;
+                padding-right: 15px;
+                width: 70%;
+            }
+
+            & > p:nth-of-type(3) > ul {
+                padding: 0px 5px;
+                padding-top: 5px;
+                margin-left: 15px;
+
+                & > li {
+                    padding: 10px 0px;
+                }
+            }
+            
+        }
+
+        &--tech {
+            font-family: $secondary-font;
+            font-weight: 300;
+            margin-top: 20px;
+
+            & > h4 {
+                font-weight: 400;
+            }
+
+            &--icons {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                margin-top: 20px;
+
+                &-item {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    padding: 0px 20px;
+
+                    & > svg {
+                        font-size: 3rem;
+                        margin-bottom: 10px;
+                    }
+
+                    & > .style-icons {
+                        display: flex;
+                        flex-direction: row;
+                        margin-left: 8px;
+
+                        & > svg {
+                            font-size: 3rem;
+                            margin-bottom: 10px;
+
+                            &:first-child {
+                                margin-right: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

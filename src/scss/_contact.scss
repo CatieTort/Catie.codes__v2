@@ -1,0 +1,88 @@
+.contact {
+
+    &__container {
+       box-shadow: $box-shadow;
+       min-width: 450px;
+       max-width: 600px;
+       margin: 40px auto;
+       border: 1px solid rgba(46,46,46, 0.2);
+       background-color: #fcfcfc;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+        padding: 20px 40px;
+        padding-top: 40px;
+
+        & > h2 {
+            color: $maroon;
+        }
+    }
+
+    &-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+
+        & > label {
+            padding: 8px 0px;
+            padding-top: 25px;
+            font-size: 1rem;
+        }
+
+        & > textarea {
+            height: 180px;
+            resize: none;
+            padding-top: 10px;
+        }
+
+        &__input {
+            border: 1px solid #ddd;
+            width: 100%;
+            border-radius: 2px;
+            height: 35px;
+            padding-left: 10px;
+            font-size: 1rem;
+            
+
+            &:focus {
+                border-color: #b7b7b7;
+                outline: none;
+                box-shadow: inset 0px 1px 4px -2px rgba(46,46,46, 0.5);
+            }
+        }
+
+        &__btn {
+            color: #fff;
+            border: none;
+            background-color: $blue;
+            border-radius: 3px;
+            font-size: 1rem;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            align-self: flex-end;
+            transition: background-color .7s, transform .4s;
+
+            &:hover {
+            transform: translateY(-0.2rem);
+            box-shadow: 0 0.3rem 0.4rem rgba(0, 0, 0, 0.2);
+            background-color: $blue-hover;
+
+                &::after {
+                    transform: scaleX(1.4) scaleY(1.6);
+                    opacity: 0;
+                }
+            }
+
+            &:active, &:focus {
+                outline: none;
+                transform: translateY(0.1rem);
+                box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+}

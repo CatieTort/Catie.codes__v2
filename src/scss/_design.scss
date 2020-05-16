@@ -1,0 +1,47 @@
+.design {
+
+    &-img{
+
+        &__grid {
+            &-container {
+                align-self: center;
+                display: grid;
+                grid-gap: 10px 10px;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                margin: 40px 30px;
+                margin-top: 60px;
+            }
+
+            &--item {
+                background-color: #fcfcfc;
+                justify-self: center;
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                height: 300px;
+                width: 300px;
+                box-shadow: $box-shadow;
+            }
+        }
+
+        &--close {
+            font-size: 1rem;
+            color: $shadow-gray;
+        }
+
+
+        &__container {
+
+            & > img {
+                height: 200px;
+                width: 200px;
+            }
+
+        }
+
+        &__description {
+            font-size: 1rem;
+        }
+    }
+}

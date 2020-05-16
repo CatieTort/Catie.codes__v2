@@ -1,0 +1,34 @@
+.banner-img { 
+    background-size: cover;
+    height: 550px;
+    width: 100vw;
+    margin: 0px -16px;
+    margin-bottom: 80px;
+
+    &__typing-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        height: 100%;
+        
+        & > .typing {
+            margin-top: -30px;
+            color: #fff;
+            font-family: $primary-font;
+            font-weight: 400;
+            font-size: 3rem;
+        }
+    }
+}
+
+.typing__cursor {
+    border-right: 2px solid #fff;
+    padding-left: 5px;
+    animation: blink 1s infinite;
+}  
+
+@keyframes blink {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
