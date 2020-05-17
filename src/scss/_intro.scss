@@ -34,7 +34,7 @@
         &:hover {
             transform: translateY(-0.2rem);
             box-shadow: 0 0.3rem 0.4rem rgba(0, 0, 0, 0.2);
-            background-color: $blue-hover;
+            background-image: linear-gradient($blue-hover, $blue);
 
             &::after {
                 transform: scaleX(1.4) scaleY(1.6);

@@ -38,7 +38,6 @@ function Work(){
 
     return (
         <div id="work" className="work__container">
-            <h1>Work &amp; Projects</h1>
             <div className="work__item">
                 <div className="work__item-header">
                     <h2>Hookit</h2><h3>Sponsorship Analytics &amp; Valuation</h3>
