@@ -1,6 +1,4 @@
 import React from 'react'
-import { faJsSquare, faHtml5, faCss3Alt, faSass, faNodeJs, faReact, faSketch, faInvision } from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const publicURL = process.env.PUBLIC_URL
 

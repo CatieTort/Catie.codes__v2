@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 
 const MODAL = document.getElementById('modalRoot');
 
-const Modal = ({ children }) => {
+const Modal = ({ children, closeImg }) => {
     return createPortal(
         <div className="modal">{children}</div>
         , MODAL

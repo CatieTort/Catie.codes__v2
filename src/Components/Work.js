@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import Modal from './Modal'
 import DesignImage from './DesignImage'
 import {image} from '../utils/designDetails'
-import { faJsSquare, faHtml5, faCss3Alt, faSass, faNodeJs, faReact, faSketch, faInvision } from '@fortawesome/free-brands-svg-icons'
+import { faJsSquare, faHtml5, faCss3Alt, faSass, faReact, faSketch, faInvision } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
