@@ -88,9 +88,15 @@ function Work(){
                     <div className="design-img__grid-container">
                         {image.map((item, index) => {
                             if (item.multiple === true) {
-                                return (<div key={index} className="design-img__grid--item" onClick={() => handleDesignClick(index)} style={{ backgroundImage: `url(${item.src[0]})` }}></div>)
+                                return (
+                                    <div className="design-img__grid--item__container" onClick={() => handleDesignClick(index)}>
+                                <div className="design-img__grid--item-overlay"><div>{item.descTitle}</div></div>
+                                <div key={index} className="design-img__grid--item" style={{ backgroundImage: `url(${item.src[0]})` }}></div></div>)
                             } else {
-                                return (<div key={index} className="design-img__grid--item" onClick={() => handleDesignClick(index)} style={{ backgroundImage: `url(${item.src})` }}></div>)
+                                return (
+                                    <div className="design-img__grid--item__container" onClick={() => handleDesignClick(index)}>
+                                <div className="design-img__grid--item-overlay"><div>{item.descTitle}</div></div>
+                                <div key={index} className="design-img__grid--item"  style={{ backgroundImage: `url(${item.src})` }}></div></div>)
                             }
                         })}
                     </div>
