@@ -79,7 +79,17 @@
                     & > p {
                         padding-bottom: 15px;
                     }
+
+                   & > ul {
+                    padding: 0px 5px;
+                    padding-top: 5px;
+                    margin-left: 15px;
+
+                    & > li {
+                        padding: 10px 0px;
+                    }
                 }
+            }
 
              & > p:nth-of-type(1) {
                     padding-top: 25px;
@@ -92,16 +102,6 @@
                 padding-top: 15px;
                 padding-right: 15px;
                 width: 80%;
-            }
-
-            & > p:nth-of-type(3) > ul {
-                padding: 0px 5px;
-                padding-top: 5px;
-                margin-left: 15px;
-
-                & > li {
-                    padding: 10px 0px;
-                }
             }
             
         }

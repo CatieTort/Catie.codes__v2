@@ -38,8 +38,8 @@ export const image =
         description: "Admin Dashoard to track social account authentications",
     },
     {
-        multiple: false,
-        src: `${publicURL}/assets/Trends.png`,
+        multiple: true,
+        src: [`${publicURL}/assets/Trends.png`, `${publicURL}/assets/Trends-2.png` ],
         altDesc: "Trends",
         descTitle: "Trends",
         description: "Data visualization for social trending data",

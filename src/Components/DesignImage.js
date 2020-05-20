@@ -33,7 +33,7 @@ function DesignImage(props){
             <div className="design-img--close" onClick={() => props.closeImg()}>
                 <FontAwesomeIcon icon={faTimes}/>
             </div>
-            {imgCount > 1 && Array.isArray(props.src) ?
+            {imgCount > 1 && props.multiple === true ?
              (<div className="design-display-container">
                         {props.src.map((item, i) => {
                             return (<img key={i} className={`design-image ${currentImage === i ? 'active' : ''}`} src={item} alt={`${props.imgDesc}_${i}`} />)
@@ -51,7 +51,7 @@ function DesignImage(props){
             </div>) : (
             <div className="design-display-container">
                 <img src={props.src} alt={props.imgDesc} />
-                <div className="design-img__description">
+                <div className="design-img__description single">
                     <p><span>{props.descTitle}</span><br />{props.designDesc}</p>
                 </div>
             </div>)
