@@ -28,6 +28,7 @@ function Work(){
             <DesignImage
                 src={image[designId].src}
                 imgDesc={image[designId].altDesc}
+                descTitle={image[designId].descTitle}
                 designDesc={image[designId].description}
                 closeImg={closeModal}
             />
@@ -48,13 +49,13 @@ function Work(){
                         <div className="work__project--desc-title">Pro Account</div>
                         <p>A web based, mobile first React-Redux application consuming .NET REST APIs</p>
                         <p>A tool designed for pro-athletes to authenticate their social network accounts and recieve detailed insights.</p>
-                        <p>Pro-Athletes were provided with:
+                        <div><p>Pro-Athletes were provided with:</p>
                             <ul>
                                 <li>Data to analyze social performance to improve and become a better ambassador for their sponsors.</li>
                                 <li>Rank compared to other athletes and influencers in their sport or industry when it comes to social engagements, followers, and total posts.</li>
                                 <li>Detailed insight into who their fans are, what they like, and where they are from.</li>
                             </ul>
-                        </p>
+                        </div>
                         <p>Main business goal was to authenticate more social accounts and provide detailed data to brand sponsors.</p>
                         <div className="work__project--tech"><h4>Technologies used:</h4> 
                             <div className="work__project--tech--icons">
@@ -74,8 +75,8 @@ function Work(){
                 <div className="work__project design">
                     <h3 className="work__project--desc-title">Design</h3>
                     <div className="work__project--desc design">
-                        All the details here.
-
+                        <p>Below are several designs that I created while at Hookit. These designs required collaborating closely with engineering, product managers and getting buy-ins from the executive team. 
+                        The mocks were created in Sketch, and prototyping was done using InVision or FramerX.</p>
                          <div className="work__project--tech"><h4>Technologies used:</h4>
                             <div className="work__project--tech--icons">
                                 <div className="work__project--tech--icons-item"><FontAwesomeIcon icon={faSketch} style={{ color: "#fda902" }} /> Sketch</div>

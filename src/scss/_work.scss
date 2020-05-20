@@ -61,15 +61,25 @@
         &--desc {
             margin-left: 30px;
 
-            &.design {
-                padding-top: 30px;
-            }
 
             &-title {
                 font-weight: 700;
                 margin-top: 10px;
                 font-size: 1.7rem;
             }
+
+            & > div:nth-of-type(2) {
+                    font-family: $secondary-font;
+                    font-weight: 300;
+                    line-height: 1.5rem;
+                    padding-top: 15px;
+                    padding-right: 15px;
+                    width: 80%;
+
+                    & > p {
+                        padding-bottom: 15px;
+                    }
+                }
 
              & > p:nth-of-type(1) {
                     padding-top: 25px;

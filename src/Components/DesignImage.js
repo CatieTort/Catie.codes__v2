@@ -35,10 +35,10 @@ function DesignImage(props){
             </div>
             {imgCount > 1 && Array.isArray(props.src) ?
              (<div className="design-display-container">
-                <div className="design-img__description"><p><span>{props.descTitle}</span>{props.designDesc}</p></div>
-                    {props.src.map((item, i) => {
-                        return (<img key={i} className={`design-image ${currentImage === i ? 'active' : ''}`} src={item} alt={`${props.imgDesc}_${i}`} />)
-                    })}
+                        {props.src.map((item, i) => {
+                            return (<img key={i} className={`design-image ${currentImage === i ? 'active' : ''}`} src={item} alt={`${props.imgDesc}_${i}`} />)
+                        })}
+                        <div className="design-img__description"><p><span>{props.descTitle}</span><br /><br />{props.designDesc}</p></div> 
                 <div className="design-display-controls">
                     <div className="design-display-left" onClick={() => handleShow(-1)}><FontAwesomeIcon icon={faChevronLeft} /></div>
                         <div className="dot__container">
@@ -52,7 +52,7 @@ function DesignImage(props){
             <div className="design-display-container">
                 <img src={props.src} alt={props.imgDesc} />
                 <div className="design-img__description">
-                    <p><span>{props.descTitle}</span>{props.designDesc}</p>
+                    <p><span>{props.descTitle}</span><br />{props.designDesc}</p>
                 </div>
             </div>)
             }
