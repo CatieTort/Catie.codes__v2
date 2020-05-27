@@ -2,11 +2,14 @@ import React from 'react'
 import { faJsSquare, faHtml5, faCss3Alt, faSass, faReact, faNodeJs, faAws, faSketch } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+const publicURL = process.env.PUBLIC_URL
+
 function AnthemElectric(props){
     return (
         <div className="work__item">
             <div className="work__item-header"><h2>Anthem Electric</h2></div>
             <div className="work__project">
+                <img src={`${publicURL}/assets/anthem-mockup.png`} alt="Anthem Electric Mockup" style={{borderRadius: "3px"}}/>
                 <div className="work__project--desc">
                     <div className="work__project--desc-title">Business website</div>
                         <p>MERN stack website for electrician business using Yelp GraphQL, server-side &amp; client-side rendering, client payment portal with Stripe</p>
