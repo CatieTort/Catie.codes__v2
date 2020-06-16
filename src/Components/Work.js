@@ -41,8 +41,6 @@ function Work(){
     return (
         <div id="work" className="work__container">
            <Hookit handleClick={handleDesignClick}/>
-           <AnthemElectric />
-           <StoreApp />ß
             {modal}
         </div>
     )
