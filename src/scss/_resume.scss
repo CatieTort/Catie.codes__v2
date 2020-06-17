@@ -1,6 +1,12 @@
 .resume {
     &__container {
         height: 1040px;
-        margin-top: 40px;
+        margin-top: -30px;
+        position: relative;
+
+        & > div > iframe {
+            position: absolute;
+            z-index: 12;
+        }
     }
 }
