@@ -18,6 +18,31 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin-top: 20px;
+
+    & > a.icon {
+
+        & > svg {
+            color: #000058;
+            font-size: 2.5rem;
+            cursor: pointer;
+            transition: transform .4s;
+
+    
+            &:first-child {
+                margin-right: 25px;
+            }
+
+            &:nth-child(2){
+                margin-right: 30px;
+            } 
+            
+             &:hover {
+                    color: $blue-hover;
+                    transform: translateY(-0.2rem);
+                }
+        }
+    }
 
     & > a.btn {
         color: #fff;
@@ -28,7 +53,7 @@
         transition: background-color .7s, transform .4s;
 
         &:first-child {
-            margin-right: 30px;
+            margin-left: 30px;
         }
 
         &:hover {

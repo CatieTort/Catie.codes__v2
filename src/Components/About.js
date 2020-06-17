@@ -28,9 +28,9 @@ function About(){
                             problems and improving user experiences.</p>
                     </div>
                     <div className="btn-container">
+                        <a href="https://www.linkedin.com/in/catietortorella/" target="_blank" rel='noopener noreferrer' className="icon"><FontAwesomeIcon icon={faLinkedin}  /></a>
+                        <a href="https://github.com/CatieTort" target="_blank" rel='noopener noreferrer' className="icon"><FontAwesomeIcon icon={faGithub} /></a>
                         <a href="#contact" className="btn">Contact Me</a>
-                        <a href="https://www.linkedin.com/in/catietortorella/" target="_blank" ><FontAwesomeIcon icon={faLinkedin} style={{ color: "#000058", fontSize: "2.6rem", marginRight: "25px", marginLeft: '30px', cursor: "pointer" }} /></a>
-                        <a href="https://github.com/CatieTort" target="_blank" ><FontAwesomeIcon icon={faGithub} style={{ color: "#000058", fontSize: "2.5rem", cursor: "pointer" }} /></a>
                     </div>
                 </div>
             </div>
