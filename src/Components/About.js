@@ -1,4 +1,6 @@
 import React from 'react'
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const publicURL = process.env.PUBLIC_URL
 
@@ -26,7 +28,9 @@ function About(){
                             problems and improving user experiences.</p>
                     </div>
                     <div className="btn-container">
-                        <a href="#contact">Contact Me</a>
+                        <a href="#contact" className="btn">Contact Me</a>
+                        <a href="https://www.linkedin.com/in/catietortorella/" target="_blank" ><FontAwesomeIcon icon={faLinkedin} style={{ color: "#000058", fontSize: "2.6rem", marginRight: "25px", marginLeft: '30px', cursor: "pointer" }} /></a>
+                        <a href="https://github.com/CatieTort" target="_blank" ><FontAwesomeIcon icon={faGithub} style={{ color: "#000058", fontSize: "2.5rem", cursor: "pointer" }} /></a>
                     </div>
                 </div>
             </div>
