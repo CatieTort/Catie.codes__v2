@@ -64,7 +64,6 @@ function Contact(){
             }
         }
         if(newErrors.length === 0){
-            console.log('no errors', form)
             sendForm(form)
         }
     }
@@ -87,7 +86,7 @@ function Contact(){
 
     const successModal = successSend === true ? (
         <Modal closeImg={closeModal}>
-            <div>Your message has been sent</div>
+            <div className="contact__success">Your message has been sent</div>
         </Modal>
         ) : null;
 
