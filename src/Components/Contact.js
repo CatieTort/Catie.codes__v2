@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
 import {validateText, validateEmail, validatePhone} from '../utils/validate'
 import Modal from './Modal'
+import moment from 'moment'
 
 const rootURL = 'http://localhost:8080'
+const currentYr = moment().year()
 
 function Contact(){
     const [form, setForm] = useState({name: '', company: '', email: '', phone: '', message: ''})
@@ -159,9 +161,12 @@ function Contact(){
                     >
                     </textarea>
                     {errors.length > 0 && errors.find(({ input }) => input === 'message') ? <div className="contact-form__err-msg">{errors[errors.findIndex(({ input }) => input === 'message')].err}</div> : null}
-                    <button className="contact-form__btn" type="submit">Submit</button>
+                    <button className="contact-form__btn" type="submit">Send</button>
                 </form>
                 {successModal}
+            </div>
+            <div className="footer">
+                <div>Copyright &#169; Cathleen Tortorella {currentYr}</div>
             </div>
         </div>
     )
