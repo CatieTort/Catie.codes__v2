@@ -1,6 +1,6 @@
 exports.validateText = (text) => {
-    let letters = /^[a-zA-Z0-9\s]+$/
-    if(text.match(letters)){
+    let letters = /^[a-zA-Z0-9\s@./#&+-]+$/
+    if(letters.test(text)){
         return true
     }
     return false

@@ -15,6 +15,48 @@
         }
     }
 
+    &__success {
+        min-width: 300px;
+        max-width: 500px;
+        background: #fff;
+        padding: 20px;
+        padding-left: 10px;
+        border-radius: 2px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        & > .fa-times {
+            color: rgba($shadow-gray, 0.7);
+            align-self: flex-end;
+        }
+
+        & > .check > .fa-check-circle {
+            position: absolute;
+            z-index: 3;
+            color: green;
+            top: 62px;
+            right: 120px;
+            font-size: 1.4rem;
+            background-color: #fff;
+            border-radius: 50%;
+            border: 1px solid #fff;
+        }
+
+        & > .fa-envelope {
+            z-index: 2;
+            font-size: 3rem;
+            color: rgba($shadow-gray, 0.7);
+            margin-bottom: 20px;
+        }
+
+        & > p {
+            margin-bottom: 20px;
+        }
+    }
+
     &__container {
        min-width: 450px;
        max-width: 600px;

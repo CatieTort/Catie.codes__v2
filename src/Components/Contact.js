@@ -1,13 +1,16 @@
 import React, {useState} from 'react';
 import {validateText, validateEmail, validatePhone} from '../utils/validate'
+import { faTimes, faEnvelope, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Modal from './Modal'
 import moment from 'moment'
 
 const rootURL = 'http://localhost:8080'
 const currentYr = moment().year()
+const initialForm = { name: '', company: '', email: '', phone: '', message: '' }
 
 function Contact(){
-    const [form, setForm] = useState({name: '', company: '', email: '', phone: '', message: ''})
+    const [form, setForm] = useState(initialForm)
     const [errors, setError] = useState([])
     const [successSend, setSuccessfulSend] = useState('')
 
@@ -26,6 +29,10 @@ function Contact(){
         .then(status => {
             if (status === 200) {
                 setSuccessfulSend(true)
+                setTimeout(() => { 
+                    closeModal()
+                    setForm(initialForm)
+                }, 2000)
             } else {
                 setSuccessfulSend(false)
             }
@@ -59,7 +66,6 @@ function Contact(){
             }
 
             if (newErrors.length > 0) {
-                console.log(newErrors)
                 setError(newErrors)
             }
         }
@@ -68,7 +74,7 @@ function Contact(){
         }
     }
 
-    function closeModal(){
+    function closeModal(e){
         setSuccessfulSend('')
     }
 
@@ -85,8 +91,13 @@ function Contact(){
     }
 
     const successModal = successSend === true ? (
-        <Modal closeImg={closeModal}>
-            <div className="contact__success">Your message has been sent</div>
+        <Modal style={{justifyContent: "flex-end", paddingBottom: "445px"}}>
+            <div className="contact__success">
+                <FontAwesomeIcon icon={faTimes} onClick={e => closeModal(e)} />
+                    <FontAwesomeIcon icon={faEnvelope} />
+                    <div className="check"><FontAwesomeIcon icon={faCheckCircle} /></div>
+                <p>Your message has been sent</p>
+            </div>
         </Modal>
         ) : null;
 

@@ -3,9 +3,9 @@ import { createPortal } from 'react-dom';
 
 const MODAL = document.getElementById('modalRoot');
 
-const Modal = ({ children, closeImg }) => {
+const Modal = ({ children, closeImg, style }) => {
     return createPortal(
-        <div className="modal">{children}</div>
+        <div className="modal" style={style}>{children}</div>
         , MODAL
     )
 }

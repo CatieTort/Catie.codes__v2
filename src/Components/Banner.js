@@ -22,7 +22,7 @@ function Banner() {
         if (i !== -1) {
             typeRef.current.innerHTML = word.slice(0, i)
             i--
-            setTimeout(() => deleteWord(word, i), 300)
+            setTimeout(() => deleteWord(word, i), 100)
         } else {
             if(wordsTyped === words.length - 1){
                 setWordsTyped(0)
@@ -45,9 +45,9 @@ function Banner() {
             }
 
             if(wordsTyped === 2){
-                setTimeout(() => deleteWord(word, i - 1), 4000)
+                setTimeout(() => deleteWord(word, i - 1), 3000)
             }else{
-                setTimeout(() => deleteWord(word, i - 1), 2000)
+                setTimeout(() => deleteWord(word, i - 1), 1000)
             } 
         }
     },[words, wordsTyped, deleteWord])
