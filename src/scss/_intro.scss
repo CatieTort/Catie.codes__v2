@@ -11,6 +11,10 @@
         align-items: flex-start;
         width: 100%;
         margin-bottom: 45px;
+
+        @include respond(phone-lg){
+            flex-direction: column;
+        }
     }
 }
 
@@ -82,6 +86,12 @@
         height: 300px;
         border-radius: 2px;
         box-shadow: $box-shadow;
+
+        @include respond(phone-lg){
+            height: 200px;
+            margin: 0px auto;
+            margin-bottom: 20px;
+        }
     }
 }
 
@@ -91,9 +101,17 @@
     justify-content: flex-start;
     margin: 0 auto;
 
+     @include respond(phone-lg){
+         max-width: 350px;
+     }
+
     h2 {
         font-weight: 400;
         color: $maroon;
+
+         @include respond(phone-lg){
+             font-size: 1.5rem;
+         }
     }
 
     &__desc {
@@ -103,6 +121,10 @@
         margin-bottom: 15px;
         line-height: 1.6rem;
         font-size: 1.2rem;
+
+         @include respond(phone-lg){
+             font-size: 1rem;
+         }
 
         & > p {
             font-weight: 300;

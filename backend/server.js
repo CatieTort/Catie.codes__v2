@@ -39,7 +39,5 @@ app.post('/send-contact-form', (req, res, next) => {
     })
 });
 
-app.listen(process.env.PORT || 8080, () => {
-    console.log('server running on 8080')
-});
+app.listen(process.env.PORT || 8080);
 

@@ -16,9 +16,18 @@
         text-shadow: 2px 1px 1px $shadow-gray;
         color: $teal;
         margin-left: 20px;
+
+         @include respond(phone-lg){
+             font-size: 3rem;
+             margin-left: 10px;
+         }
     }
 
-
+    @include respond(phone-lg){
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
 }
 
 .nav-bar {
@@ -37,6 +46,15 @@
            padding: 0px 15px;
            font-weight: 300;
            cursor: pointer;
+
+            @include respond(phone-lg){
+                font-size: 1rem;
+                padding: 0px 10px;
+
+                &:first-child, &:last-child {
+                    padding: 0px;
+                }
+            }
            
            &__link{
                 text-decoration: none;
@@ -45,6 +63,11 @@
                 background-size: 220%;
                 transition: all .7s;
                 padding: 5px 10px;
+                width: 100%;
+
+                 @include respond(phone-lg){
+                     padding: 5px;
+                 }
 
             &:hover {
                 color: #fff;
