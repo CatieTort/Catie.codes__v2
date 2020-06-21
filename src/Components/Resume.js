@@ -1,17 +1,15 @@
 import React from 'react'
-import PdfViewer from './PdfViewer'
-import PDFJSBackend from '../backends/pdfjs';
 
+const publicURL = process.env.PUBLIC_URL
 
 function Resume(){
 
     return (
         <div className="resume__container" id="resume">
-            <PdfViewer 
-                backend={PDFJSBackend}
-                src={`http://www.catie.codes/static/media/Tortorella_Cathleen.pdf`}
-            ></PdfViewer>
-          
+            <div>
+                <div className="resume__download-btn">Download Resume</div>
+            </div>
+            <img src={`${publicURL}/assets/Resume-2020.png`} alt="2020 resume"/>
         </div>
     )
 }

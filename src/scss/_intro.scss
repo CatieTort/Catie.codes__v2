@@ -82,6 +82,11 @@
 
 .intro-img {
     margin: 0px 45px;
+
+    @include respond(phone-lg){
+        align-self: center;                
+    }
+
     & > img {
         height: 300px;
         border-radius: 2px;
