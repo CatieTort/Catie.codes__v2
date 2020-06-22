@@ -9,8 +9,8 @@
         align-items: center;
 
         @include respond(phone-lg){
-            height: 440px;
-            margin-top: -210px;
+            height: 530px;
+            margin-top: -255px;
         }
 
         & > img {
@@ -26,37 +26,68 @@
             width: 800px;
             display: flex;
             flex-direction: column;
+
+             @include respond(phone-lg){
+                 width: 350px;
+             }
         }
 
     }
 
-    &__download-btn {
-        align-self: flex-end;
-        width: 174px;
-        color: #fff;
-        margin-bottom: 40px;
-        background-color: $blue;
-        cursor: pointer;
-        border-radius: 2px;
-        text-decoration: none;
-        padding: 10px 20px;
-        transition: background-color .7s, transform .4s;
+    &__download {
 
-          &:hover {
-            transform: translateY(-0.2rem);
-            box-shadow: 0 0.3rem 0.4rem rgba(0, 0, 0, 0.2);
-            background-image: linear-gradient($blue-hover, $blue);
+        &-icon {
+            display: none;
+            color: #fff;
+            font-size: 1rem;
+            background-color: $blue;
+            border-radius: 2px;
+            width: 30px;
+            align-self: flex-end;
+            padding:5px;
+            text-align: center;
+            margin-bottom: 20px;
 
-            &::after {
-                transform: scaleX(1.4) scaleY(1.6);
-                opacity: 0;
+            @include respond(phone-lg){
+                display: flex;
+                justify-content: center;
             }
         }
+    
+        &-btn {
+            align-self: flex-end;
+            width: 174px;
+            color: #fff;
+            margin-bottom: 40px;
+            background-color: $blue;
+            cursor: pointer;
+            border-radius: 2px;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background-color .7s, transform .4s;
 
-        &:active, &:focus {
-            outline: none;
-            transform: translateY(0.1rem);
-            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+            @include respond(phone-lg){
+                display: none;
+            }
+
+            &:hover {
+                transform: translateY(-0.2rem);
+                box-shadow: 0 0.3rem 0.4rem rgba(0, 0, 0, 0.2);
+                background-image: linear-gradient($blue-hover, $blue);
+
+                &::after {
+                    transform: scaleX(1.4) scaleY(1.6);
+                    opacity: 0;
+                }
+
+            }
+
+            &:active, &:focus {
+                outline: none;
+                transform: translateY(0.1rem);
+                box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+            }
         }
+    
     }
 }

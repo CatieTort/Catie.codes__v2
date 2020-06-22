@@ -63,7 +63,7 @@ function Banner() {
     return (
         <div className="banner-img" style={backgroundImg}>
             <div className="banner-img__typing-container">
-                <p className="typing"><p ref={typeRef}></p><span className="typing__cursor"></span></p>
+                <div className="typing"><p ref={typeRef}></p><span className="typing__cursor"></span></div>
             </div>
         </div>
     )

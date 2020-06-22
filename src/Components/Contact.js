@@ -102,9 +102,9 @@ function Contact(){
         ) : null;
 
     return (
-        <div className="contact__background">
+        <div className="contact__background" id="contact">
             <h2>Let's Talk</h2>
-            <div className="contact__container" id="contact">
+            <div className="contact__container">
                 <form className="contact-form" id="contact" onSubmit={e => handleSubmit(e)}>
                     <div className="contact-form__row">
                         <div className="contact-form__input-container">    

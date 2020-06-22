@@ -58,12 +58,12 @@ function Hookit(props){
                     {image.map((item, index) => {
                         if (item.multiple === true) {
                             return (
-                                <div className="design-img__grid--item__container" onClick={() => props.handleClick(index)}>
+                                <div key={index} className="design-img__grid--item__container" onClick={() => props.handleClick(index)}>
                                     <div className="design-img__grid--item-overlay"><div>{item.descTitle}</div></div>
                                     <div key={index} className="design-img__grid--item" style={{ backgroundImage: `url(${item.src[0]})` }}></div></div>)
                         } else {
                             return (
-                                <div className="design-img__grid--item__container" onClick={() => props.handleClick(index)}>
+                                <div key={index} className="design-img__grid--item__container" onClick={() => props.handleClick(index)}>
                                     <div className="design-img__grid--item-overlay"><div>{item.descTitle}</div></div>
                                     <div key={index} className="design-img__grid--item" style={{ backgroundImage: `url(${item.src})` }}></div></div>)
                         }

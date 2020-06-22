@@ -12,19 +12,25 @@
         @include respond(phone-lg){
             clip-path: polygon(100% 0, 100% 94%, 0 95%, 0 0);
             padding-bottom: 265px;
+            padding-top: 20px;
         }
     }
 
 
     &__item {
         display: flex;
-        width: 90vw;
+        width: 90%;
         margin: 40px auto;
         flex-direction: column;
         background-color: #fff;
         border: 1px solid #ccc;
         border-radius: 3px;
         box-shadow: $box-shadow;
+
+        @include respond(desktop){
+            width: 70%;
+
+        }
 
         &-header {
             display: flex;
@@ -77,6 +83,10 @@
             flex-direction: column;
         }
 
+        @include respond(desktop){
+            margin-bottom: 40px;
+        }
+
         &.design {
             margin: 20px 55px;
             flex-direction: column;
@@ -97,6 +107,16 @@
                 align-self: center;
                 width:300px;
             }
+
+            @include respond(tab-port){
+                width: 600px;
+            }
+
+             @include respond(desktop){
+                 width: auto;
+                 margin-left: 40px;
+                 margin-right: 25px;
+             }
         }
 
         &--desc {
@@ -155,6 +175,10 @@
                 @include respond(phone-lg){
                     padding-right: 0px;
                     width: 90%;
+                }
+
+                @include respond(desktop){
+                    width: 98%;
                 }
             }
             
