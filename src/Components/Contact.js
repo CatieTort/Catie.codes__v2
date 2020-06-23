@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Modal from './Modal'
 import moment from 'moment'
 
-const rootURL = 'http://localhost:8080'
 const currentYr = moment().year()
 const initialForm = { name: '', company: '', email: '', phone: '', message: '' }
 
@@ -16,7 +15,7 @@ function Contact(){
 
 
    function sendForm(formData){
-        fetch(`${rootURL}/send-contact-form`, {
+        fetch(`/send-contact-form`, {
             method: 'POST',
             mode: 'cors',
             body: JSON.stringify(formData),

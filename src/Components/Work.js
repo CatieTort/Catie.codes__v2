@@ -2,11 +2,7 @@ import React, {useState} from 'react'
 import Modal from './Modal'
 import DesignImage from './DesignImage'
 import Hookit from './Hookit'
-import AnthemElectric from './AnthemElectric'
-import StoreApp from './StoreApp'
 import {image} from '../utils/designDetails'
-
-const publicURL = process.env.PUBLIC_URL
 
 function Work(){
     const [showDesignImage, setShowImage] = useState(false);
