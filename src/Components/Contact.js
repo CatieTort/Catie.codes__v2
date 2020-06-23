@@ -15,7 +15,7 @@ function Contact(){
 
 
    function sendForm(formData){
-        fetch(`/api/send-contact-form`, {
+        fetch(`/send-contact-form`, {
             method: 'POST',
             mode: 'cors',
             body: JSON.stringify(formData),
