@@ -3,7 +3,8 @@ const cors = require('cors')
 const path = require('path')
 const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
-const mailgun = require('mailgun-js')
+const mailgun = require('mailgun-js');
+const fs = require('fs');
 
 const app = express();
 
@@ -37,6 +38,10 @@ app.post('/send-contact-form', (req, res, next) => {
             return res.sendStatus(404)
         }
     })
+});
+
+app.get('/download-resume', (req,res) => {
+    res.download('./public/assets/files/Tortorella_Cathleen.pdf')
 });
 
 app.listen(process.env.PORT || 8080);
