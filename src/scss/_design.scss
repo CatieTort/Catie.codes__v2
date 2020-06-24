@@ -80,6 +80,10 @@
             flex-direction: column;
             align-items: center;
 
+            @include respond (phone-lg){
+                width: 400px;
+            }
+
 
             & > img {
                 height: 200px;
@@ -109,6 +113,10 @@
                     font-size: 1.2rem;
                 }
             }
+
+            @include respond (phone-lg){
+                width: 90%;
+            }
         }
     }
 
@@ -127,6 +135,12 @@
                 &.active {
                     display: block;
                     margin:10px;
+                }
+            }
+
+            @include respond (phone-lg){
+                 & > img {
+                    width: 350px;
                 }
             }
         }

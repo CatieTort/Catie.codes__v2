@@ -1,6 +1,4 @@
 import React from 'react'
-import { faDownload } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const publicURL = process.env.PUBLIC_URL
 
@@ -8,11 +6,7 @@ function Resume(){
 
     return (
         <div className="resume__container" id="resume">
-            <div>
-                <div className="resume__download-icon"><FontAwesomeIcon icon={faDownload} /></div>
-                <a className="resume__download-btn" href={`/api/download-resume`} download>Download Resume</a>
-            </div>
-            <img src={`${publicURL}/assets/Resume-2020.jpg`} alt="2020 resume"/>
+            <img src={`${publicURL}/assets/Dev_res.jpg`} alt="2020 resume"/>
         </div>
     )
 }

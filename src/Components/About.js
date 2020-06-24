@@ -30,7 +30,7 @@ function About(){
                     <div className="btn-container">
                         <a href="https://www.linkedin.com/in/catietortorella/" target="_blank" rel='noopener noreferrer' className="icon"><FontAwesomeIcon icon={faLinkedin}  /></a>
                         <a href="https://github.com/CatieTort" target="_blank" rel='noopener noreferrer' className="icon"><FontAwesomeIcon icon={faGithub} /></a>
-                        <a href="#contact" className="btn">Contact Me</a>
+                        <a href="mailto:catie@catie.codes" className="btn">Contact Me</a>
                     </div>
                 </div>
             </div>
